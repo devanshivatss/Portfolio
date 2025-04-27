@@ -1,3 +1,4 @@
+/* Base Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -9,17 +10,16 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
   box-sizing: border-box;
-  overflow: hidden;   /* Prevents accidental overflows */
 }
 
-/* Nav Links */
+/* Default: Desktop View */
 .nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;     /* Prevents breaking layout on smaller screens */
+  flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -30,14 +30,14 @@
   text-decoration: none;
   color: #5a5a5a;
   font-weight: bold;
-  white-space: nowrap;   /* Prevents link text from breaking */
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
   color: #b89b72;
 }
 
-/* Burger Icon */
+/* Burger Icon Hidden by Default */
 .burger {
   display: none;
   font-size: 2rem;
@@ -50,6 +50,7 @@
 
 /* -------- Responsive Styles -------- */
 @media (max-width: 768px) {
+  /* Hide nav-links by default on mobile */
   .nav-links {
       display: none;
       flex-direction: column;
@@ -64,6 +65,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
+  /* Show when toggled */
   .nav-links.open {
       display: flex;
   }
