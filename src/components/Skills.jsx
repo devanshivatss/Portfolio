@@ -13,7 +13,7 @@ function Skills() {
     },
     {
       category: "Tech",
-      skills: ["SQL", "Python", "Data Analysis", "Data Visualization"]
+      skills: ["SQL", "Python", "Data Analysis", "Data Visualization", "Kubernetes", "Linux", "Network Fundamentals", "Open source cloud technologies"]
     }
   ];
 
