@@ -6,6 +6,7 @@ import './Contact.css';
 function Home() {
   return (
     <section id="home" className="home-section" data-aos="fade-up">
+      <br></br>
       <div className="home-container">
         <div className="home-left">
           <h1>Devanshi Vats</h1>
