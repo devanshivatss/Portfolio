@@ -1,44 +1,60 @@
 .cert-section {
-    padding: 80px 20px;
-    background-color: #ffffff;
-    text-align: center;
-  }
-  
-  .cert-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #4b4b4b;
-  }
-  
-  .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    justify-items: center;
-  }
-  
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.cert-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #4b4b4b;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cert-card {
+  background-color: #efe9e4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 200px;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+}
+
+.cert-card p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #5a5a5a;
+  word-wrap: break-word;
+}
+
+/* Responsive Tweak */
+@media (max-width: 500px) {
   .cert-card {
-    background-color: #efe9e4;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    max-width: 220px;
-    transition: transform 0.3s ease;
+      max-width: 90%;
   }
-  
-  .cert-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .cert-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .cert-card p {
-    margin-top: 10px;
-    font-size: 0.95rem;
-    color: #5a5a5a;
-  }
-  
+}

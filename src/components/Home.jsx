@@ -1,12 +1,10 @@
 import React from 'react';
 import './Home.css';
 import resume from '../assets/resume.pdf';
-import './Contact.css';
 
 function Home() {
   return (
     <section id="home" className="home-section" data-aos="fade-up">
-      <br></br>
       <div className="home-container">
         <div className="home-left">
           <h1>Devanshi Vats</h1>
@@ -16,7 +14,7 @@ function Home() {
             <span>CROSS-INDUSTRY EXPERIENCE</span>
           </div>
           <p className="short-desc">
-           Across Marketing, Technology, and Supply Chain Operations —<br/>
+            Across Marketing, Technology, and Supply Chain Operations —<br/>
             Bringing Adaptable, 360° approach to solving business challenges.
           </p>
 
@@ -45,16 +43,12 @@ function Home() {
           <a href={resume} download="Devanshi_Vats_CV.pdf">
             <button className="download-cv-btn">DOWNLOAD CV</button>
           </a>
-          <br></br>
           <div className="contact-item">
-        <img src="/assets/email.png" alt="Email Icon" />
-        <a href="mailto:b00809794@essec.edu">b00809794@essec.edu</a>
-      
-      
-      
-        <img src="/assets/linkedin.png" alt="LinkedIn Icon" />
-        <a href="https://www.linkedin.com/in/devanshi-vats/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
-      </div>
+            <img src="/assets/email.png" alt="Email Icon" />
+            <a href="mailto:b00809794@essec.edu">b00809794@essec.edu</a>
+            <img src="/assets/linkedin.png" alt="LinkedIn Icon" />
+            <a href="https://www.linkedin.com/in/devanshi-vats/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+          </div>
         </div>
       </div>
     </section>

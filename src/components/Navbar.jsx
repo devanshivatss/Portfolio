@@ -10,9 +10,10 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="burger" onClick={toggleMenu}>
+      <div className="burger" onClick={toggleMenu} aria-label="Toggle navigation menu">
         ☰
       </div>
+
       <ul className={isOpen ? 'nav-links open' : 'nav-links'}>
         <li><a href="#home">Home</a></li>
         <li><a href="#education">Education</a></li>

@@ -2,6 +2,7 @@
   padding: 80px 20px;
   background-color: #ffffff;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .exp-section h2 {
@@ -10,26 +11,30 @@
   color: #4b4b4b;
 }
 
+/* Card Styling */
 .exp-card {
   background-color: #efe9e4;
   border-left: 5px solid #b89b72;
   padding: 20px;
   margin: 20px auto;
+  width: 100%;
   max-width: 700px;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
-/* Header with logo and company name */
+/* Header Flex */
 .exp-header {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 8px;
 }
 
+/* Logo */
 .company-logo {
   width: 36px;
   height: 36px;
@@ -38,13 +43,15 @@
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
+/* Titles */
 .exp-card h3 {
   margin: 0;
   color: #5a5a5a;
   font-size: 1.2rem;
+  word-break: break-word;   /* Prevent long names from overflowing */
 }
 
-/* Role and Location */
+/* Role & Location */
 .role {
   font-weight: 600;
   margin: 4px 0;
@@ -57,7 +64,7 @@
   margin-bottom: 10px;
 }
 
-/* Button styling */
+/* Buttons */
 .exp-card button {
   background-color: #b89b72;
   color: white;
@@ -66,13 +73,14 @@
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
 .exp-card button:hover {
   background-color: #a07f56;
 }
 
-/* List styling */
+/* List */
 .exp-card ul {
   margin-top: 15px;
   padding-left: 20px;
@@ -81,4 +89,22 @@
 .exp-card li {
   margin-bottom: 8px;
   color: #6b6b6b;
+  line-height: 1.5;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .exp-card {
+    padding: 15px;
+  }
 }

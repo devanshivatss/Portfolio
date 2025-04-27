@@ -1,21 +1,36 @@
-body {
+/* ===== Global Reset & Base Styles ===== */
+* {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;   /* Prevent horizontal scroll */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
+/* Code blocks */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#education, #experience, #projects, #certifications, #skills, #contact {
-  padding-top: 60px;
-}
+
+/* Section offset for smooth scroll */
 section {
-  scroll-margin-top: 70px;  /* Match this to your navbar height */
+  scroll-margin-top: 80px;  /* Ensure this matches or exceeds navbar height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Remove individual ID paddings - control padding inside each section CSS */
+#education, #experience, #projects, #certifications, #skills, #contact {
+  /* Removed padding-top here */
 }

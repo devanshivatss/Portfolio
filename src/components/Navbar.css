@@ -1,23 +1,28 @@
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: #efe9e4;
   padding: 25px 0;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
+  box-sizing: border-box;
+  overflow: hidden;   /* Prevents accidental overflows */
 }
 
-/* Default nav links */
+/* Nav Links */
 .nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;     /* Prevents breaking layout on smaller screens */
 }
 
 .nav-links li {
-  display: inline;
   margin: 0 15px;
 }
 
@@ -25,36 +30,36 @@
   text-decoration: none;
   color: #5a5a5a;
   font-weight: bold;
+  white-space: nowrap;   /* Prevents link text from breaking */
 }
 
 .nav-links a:hover {
   color: #b89b72;
 }
 
-/* Burger icon - hidden on desktop */
+/* Burger Icon */
 .burger {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
   position: absolute;
   right: 20px;
   top: 15px;
+  user-select: none;
 }
 
 /* -------- Responsive Styles -------- */
 @media (max-width: 768px) {
-  .burger {
-      display: block;
-  }
-
   .nav-links {
       display: none;
       flex-direction: column;
+      align-items: flex-start;
       background-color: #efe9e4;
       position: absolute;
       top: 60px;
       right: 20px;
       width: 200px;
+      padding: 15px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
@@ -64,7 +69,10 @@
   }
 
   .nav-links li {
-      margin: 15px 0;
+      margin: 10px 0;
+  }
+
+  .burger {
       display: block;
   }
 }

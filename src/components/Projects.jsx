@@ -22,7 +22,7 @@ function Projects() {
   const changePage = (index, direction) => {
     setPages(prev => {
       const current = prev[index];
-      const newPage = direction === 'prev' 
+      const newPage = direction === 'prev'
         ? Math.max(current.pageNumber - 1, 1)
         : Math.min(current.pageNumber + 1, current.numPages);
       return { ...prev, [index]: { ...current, pageNumber: newPage } };
@@ -40,20 +40,21 @@ function Projects() {
               onLoadSuccess={({ numPages }) => onDocumentLoadSuccess(numPages, index)}
               loading="Loading PDF..."
             >
-              <Page 
-                pageNumber={pages[index]?.pageNumber || 1} 
-                width={300} 
+              <Page
+                pageNumber={pages[index]?.pageNumber || 1}
+                width={280}   // Slightly smaller for padding safety
               />
+
             </Document>
             <div className="nav-buttons">
-              <button 
-                onClick={() => changePage(index, 'prev')} 
+              <button
+                onClick={() => changePage(index, 'prev')}
                 disabled={!pages[index] || pages[index].pageNumber === 1}
               >
                 &#8592;
               </button>
-              <button 
-                onClick={() => changePage(index, 'next')} 
+              <button
+                onClick={() => changePage(index, 'next')}
                 disabled={!pages[index] || pages[index].pageNumber === pages[index].numPages}
               >
                 &#8594;

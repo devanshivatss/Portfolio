@@ -1,31 +1,37 @@
 /* ===== Global Reset ===== */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
+
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;  /* Replace with your chosen font */
+  overflow-x: hidden;     /* Prevent horizontal scroll */
+  overflow-y: auto;       /* Ensure vertical scroll behaves normally */
+  font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   color: #333333;
   scroll-behavior: smooth;
+  max-width: 100vw;       /* Prevent accidental overflow */
 }
 
 /* Utility class for centered text */
 .App {
   text-align: center;
+  width: 100%;
+  overflow: hidden;       /* Just in case rogue elements expand */
 }
 
-/* Ensure all sections behave responsively */
+/* Section Styling */
 section {
   width: 100%;
   box-sizing: border-box;
+  /* padding: 80px 20px;     Default padding */
 }
 
-/* Responsive padding for sections */
+/* Responsive padding */
 @media (max-width: 768px) {
   section {
     padding: 40px 15px;

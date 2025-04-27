@@ -33,45 +33,45 @@ function IndustryInsights() {
       <div className="insights-grid">
         {insightsList.map((insight, index) => (
           <div className="insight-card" key={index}>
-            
+
             <Document
               file={insight.file}
               onLoadSuccess={({ numPages }) => onDocumentLoadSuccess(numPages, index)}
             >
-                <div className="pdf-wrapper">
-              <Page 
-                pageNumber={pages[index]?.pageNumber || 1} 
-                width={400}
-                renderMode="canvas"
-              />
+              <div className="pdf-wrapper">
+                <Page
+                  pageNumber={pages[index]?.pageNumber || 1}
+                  width={400}
+                  renderMode="canvas"
+                />
               </div>
             </Document>
             <div className="nav-buttons">
-              <button 
-                onClick={() => changePage(index, 'prev')} 
+              <button
+                onClick={() => changePage(index, 'prev')}
                 disabled={!pages[index] || pages[index].pageNumber === 1}
               >
                 &lt;
               </button>
-              <button 
-                onClick={() => changePage(index, 'next')} 
+              <button
+                onClick={() => changePage(index, 'next')}
                 disabled={!pages[index] || pages[index].pageNumber === pages[index].numPages}
               >
                 &gt;
               </button>
             </div>
             <div>
-            <h3>{insight.title}</h3>
-            <p>{insight.info.includes('1st Runner Up') ? (
-  <p>
-    <strong>1st Runner Up</strong>
-    {insight.info.replace('1st Runner Up', '')}
-  </p>
-) : (
-  <p>{insight.info}</p>
-)}
+              <h3>{insight.title}</h3>
+              {insight.info.includes('1st Runner Up') ? (
+                <p>
+                  <strong>1st Runner Up</strong>
+                  {insight.info.replace('1st Runner Up', '')}
+                </p>
+              ) : (
+                <p>{insight.info}</p>
+              )}
 
-</p></div>
+            </div>
             <a href={insight.file} target="_blank" rel="noreferrer">
               <button className="view-full-btn">View Full PDF</button>
             </a>
