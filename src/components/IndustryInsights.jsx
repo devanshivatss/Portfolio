@@ -31,7 +31,6 @@ function IndustryInsights() {
   return (
     <section id="insights" className="insights-section" data-aos="fade-up">
       <h2>Projects</h2>
-      <br></br>
       <div className="insights-grid">
         {insightsList.map((insight, index) => (
           <div className="insight-card" key={index}>

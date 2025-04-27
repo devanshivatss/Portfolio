@@ -9,7 +9,7 @@ function Skills() {
     },
     {
       category: "Marketing",
-      skills: ["360° Marketing Strategies", "GTM", "Canva", "Adobe Photoshop"]
+      skills: ["360° Marketing Strategies", "GTM","Lead Generation", "Canva", "B2B Marketing", "Social Media Marketing","Adobe Photoshop"]
     },
     {
       category: "Tech",

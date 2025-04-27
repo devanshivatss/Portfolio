@@ -4,7 +4,11 @@
     text-align: center;
     box-sizing: border-box;
 }
-
+.insights-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4b4b4b;
+  }
 .insights-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
