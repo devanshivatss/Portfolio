@@ -1,0 +1,40 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #efe9e4;
+  text-align: center;
+  
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4b4b4b;
+  
+}
+
+/* Flexbox for icon + text */
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 15px;
+  font-size: 1.1rem;
+  color: #5a5a5a;
+}
+
+.contact-item img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Link styling */
+.contact-item a {
+  color: #b89b72;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #a07f56;
+}

@@ -1,0 +1,149 @@
+.edu-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .edu-section h2 {
+    font-size: 2.5rem;
+    color: #4b4b4b;
+    margin-bottom: 40px;
+  }
+  
+  /* Flex container for cards */
+  .edu-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Card styling */
+  .edu-card {
+    background-color: #efe9e4;
+    border-radius: 12px;
+    padding: 15px;
+    flex: 1 1 300px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Flex container for ESSEC images */
+  .campus-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Wrapper div for each image in ESSEC */
+  .campus-images > div {
+    width: 48%;
+  }
+  
+  /* Single campus image wrapper (GBPUAT) */
+  .single-campus {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Standardized image styling */
+  /* ESSEC - Two Campus Images */
+.campus-images img {
+    width: 100%;
+    height: 146px;
+    object-fit: cover;      /* Fill the box, crop if necessary */
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* GBPUAT - Single Campus Image */
+  .single-campus img {
+    width: 235px;
+    max-width: 100%;
+    height: 146px;
+    object-fit: cover;  /* Scale down to fit, no cropping */
+    display: block;
+    margin: 0 auto;          /* Center the image */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Campus labels */
+  .campus-label {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #5a5a5a;
+  }
+  
+  /* Text details styling */
+  .edu-details {
+    margin-top: 15px;
+    color: #333333;
+    line-height: 1.5;
+  }
+  
+  .edu-details h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .edu-details .degree {
+    font-weight: bold;
+    font-style: italic;
+    color: #555555;
+    margin: 4px 0;
+  }
+  
+  .edu-details .dates {
+    font-weight: 500;
+    color: #777777;
+    margin: 4px 0;
+  }
+  
+  .edu-details .spec-title {
+    margin-top: 10px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    text-decoration: underline;
+    color: #444444;
+  }
+  
+  .edu-details ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+    text-align: left;
+    display: inline-block;
+    color: #555555;
+  }
+  
+  .specialisation-text {
+    margin-top: 5px;
+    color: #555555;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 900px) {
+    .edu-card {
+      width: 90%;
+    }
+  
+    .campus-images {
+      flex-direction: column;
+    }
+  
+    .campus-images > div {
+      width: 100%;
+    }
+  
+    .campus-images img, 
+    .single-campus img {
+      height: 120px;
+    }
+  }
+  
