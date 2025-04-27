@@ -7,8 +7,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const insightsList = [
   { file: '/assets/insights/Scalp+.pdf', title: 'L\'Oréal Brandstorm 2025', info: '1st Runner Up from France, developing innovative hair growth solution for men suffering from hair thinning and hair loss.' },
   { file: '/assets/insights/Lumi.pdf', title: 'Build Your Own Brand: Case Study', info: "Developed Eyelixir—a sustainable eye care duo with reusable silicone masks and eye cream to address the environmental impact of single-use sheet masks." },
-  { file: '/assets/insights/LV.pdf', title: 'Trends in Luxury Industry', info: "Demonstrated product sensibility by identifying and illustrating key luxury trends anticipated for Louis Vuitton in 2025, blending market analysis with creative foresight." }
-];
+  { file: '/assets/insights/quant.pdf', title: 'Quantitative Marketing Research', info: "Evaluating the impact of personalised advertising on brand perception and consumer purchase intent in retail media." },
+  { file: '/assets/insights/LV1.pdf', title: 'Trends in Luxury Industry', info: "Demonstrated product sensibility by identifying and illustrating key luxury trends anticipated for Louis Vuitton in 2025, blending market analysis with creative foresight." }
+  ];
 
 function IndustryInsights() {
   const [pages, setPages] = useState({});
@@ -30,6 +31,7 @@ function IndustryInsights() {
   return (
     <section id="insights" className="insights-section" data-aos="fade-up">
       <h2>Projects</h2>
+      <br></br>
       <div className="insights-grid">
         {insightsList.map((insight, index) => (
           <div className="insight-card" key={index}>
