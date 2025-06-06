@@ -5,11 +5,60 @@ import './IndustryInsights.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const insightsList = [
-  { file: '/assets/insights/Scalp+.pdf', title: 'L\'Oréal Brandstorm 2025', info: '1st Runner Up from France, developing innovative hair growth solution for men suffering from hair thinning and hair loss.' },
-  { file: '/assets/insights/Lumi.pdf', title: 'Build Your Own Brand: Case Study', info: "Developed Eyelixir—a sustainable eye care duo with reusable silicone masks and eye cream to address the environmental impact of single-use sheet masks." },
-  { file: '/assets/insights/quant.pdf', title: 'Quantitative Marketing Research', info: "Evaluating the impact of personalised advertising on brand perception and consumer purchase intent in retail media." },
-  { file: '/assets/insights/LV1.pdf', title: 'Trends in Luxury Industry', info: "Demonstrated product sensibility by identifying and illustrating key luxury trends anticipated for Louis Vuitton in 2025, blending market analysis with creative foresight." }
-  ];
+  {
+    file: '/assets/insights/Scalp+.pdf',
+    title: "L'Oréal Brandstorm 2025",
+    info: '1st Runner Up from France, developing innovative hair growth solution for men suffering from hair thinning and hair loss.',
+    skills: [
+      'Consumer Insights Research', 'Competitive Analysis', 'Science R&D', 'Ingredient Study',
+      'Positioning', 'Pricing Strategy', 'Distribution Strategy', 'Market Segmentation', 'Tech Integration', 'L’Oréal Fit'
+    ]
+  },
+  {
+    file: '/assets/insights/Lumi.pdf',
+    title: 'Build Your Own Brand: Case Study',
+    info: "Developed Eyelixir—a sustainable eye care duo with reusable silicone masks and eye cream to address the environmental impact of single-use sheet masks.",
+    skills: [
+      'Sustainability', 'Market Segmentation', 'Ingredient Study',
+      'Packaging & Design', 'Pricing Strategy', 'Distribution Strategy', 'Future Catalog Expansion'
+    ]
+  },
+  {
+    file: '/assets/insights/quant.pdf',
+    title: 'Quantitative Marketing Research',
+    info: "Evaluating the impact of personalised advertising on brand perception and consumer purchase intent in retail media.",
+    skills: [
+      'Market Research', 'Survey Design', 'Hypothesis Testing', 'A/B Testing',
+      'Randomised Experiment', 'Statistical Analysis', 'Correlation Test', 'Regression Test', 'ANOVA', 'Levene’s Test'
+    ]
+  },
+  {
+    file: '/assets/insights/LV1.pdf',
+    title: 'Trends in Luxury Industry',
+    info: "Demonstrated product sensibility by identifying and illustrating key luxury trends anticipated for Louis Vuitton in 2025, blending market analysis with creative foresight.",
+    skills: [
+      'Trend Spotting', 'Personalised Luxury', 'Creative Foresight', 'Market Analysis'
+    ]
+  },
+  {
+    file: '/assets/insights/JF.pdf',
+    title: 'Jacquemus Enters Beauty',
+    info: "Designed a poetic fragrance line and product launch strategy for Jacquemus’ beauty debut, blending sensory storytelling with premium brand positioning.",
+    skills: [
+      'Brand Extension', 'Positioning Strategy', 'Premium Pricing Strategy',
+      'Distribution Strategy', 'Emotional Branding'
+    ]
+  },
+  {
+    file: '/assets/insights/DS.pdf',
+    title: 'Digital Scentscape: Reinventing Online Fragrance Discovery',
+    info: "Proposed AI-powered tools like Scentify and Museboard to bridge emotion, music, and visuals with scent, enhancing digital fragrance exploration and personalization.",
+    skills: [
+      'Multisensory Branding', 'Digital Experience', 'Personalisation', 'Experimental Design',
+      'Behavioral Segmentation', 'Social Proof & Virality'
+    ]
+  }
+];
 
 function IndustryInsights() {
   const [pages, setPages] = useState({});
@@ -34,7 +83,6 @@ function IndustryInsights() {
       <div className="insights-grid">
         {insightsList.map((insight, index) => (
           <div className="insight-card" key={index}>
-
             <Document
               file={insight.file}
               onLoadSuccess={({ numPages }) => onDocumentLoadSuccess(numPages, index)}
@@ -47,6 +95,7 @@ function IndustryInsights() {
                 />
               </div>
             </Document>
+
             <div className="nav-buttons">
               <button
                 onClick={() => changePage(index, 'prev')}
@@ -61,7 +110,9 @@ function IndustryInsights() {
                 &gt;
               </button>
             </div>
-            <div>
+
+
+            <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
               <h3>{insight.title}</h3>
               {insight.info.includes('1st Runner Up') ? (
                 <p>
@@ -72,10 +123,20 @@ function IndustryInsights() {
                 <p>{insight.info}</p>
               )}
 
+              {insight.skills && (
+                <div className="skills-capsules">
+                  {insight.skills.map((skill, i) => (
+                    <span className="skill-tag" key={i}>{skill}</span>
+                  ))}
+                </div>
+              )}
             </div>
-            <a href={insight.file} target="_blank" rel="noreferrer">
-              <button className="view-full-btn">View Full PDF</button>
-            </a>
+
+            <div style={{ marginTop: 'auto' }}>
+              <a href={insight.file} target="_blank" rel="noreferrer">
+                <button className="view-full-btn">View Full PDF</button>
+              </a>
+            </div>
           </div>
         ))}
       </div>
