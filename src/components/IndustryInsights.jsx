@@ -32,14 +32,7 @@ const insightsList = [
       'Randomised Experiment', 'Statistical Analysis', 'Correlation Test', 'Regression Test', 'ANOVA', 'Levene’s Test'
     ]
   },
-  {
-    file: '/assets/insights/LV1.pdf',
-    title: 'Trends in Luxury Industry',
-    info: "Demonstrated product sensibility by identifying and illustrating key luxury trends anticipated for Louis Vuitton in 2025, blending market analysis with creative foresight.",
-    skills: [
-      'Trend Spotting', 'Personalised Luxury', 'Creative Foresight', 'Market Analysis'
-    ]
-  },
+
   {
     file: '/assets/insights/JF.pdf',
     title: 'Jacquemus Enters Beauty',
@@ -56,6 +49,14 @@ const insightsList = [
     skills: [
       'Multisensory Branding', 'Digital Experience', 'Personalisation', 'Experimental Design',
       'Behavioral Segmentation', 'Social Proof & Virality'
+    ]
+  },
+    {
+    file: '/assets/insights/LV1.pdf',
+    title: 'Trends in Luxury Industry',
+    info: "Demonstrated product sensibility by identifying and illustrating key luxury trends anticipated for Louis Vuitton in 2025, blending market analysis with creative foresight.",
+    skills: [
+      'Trend Spotting', 'Personalised Luxury', 'Creative Foresight', 'Market Analysis'
     ]
   }
 ];
